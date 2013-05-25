@@ -7,7 +7,7 @@
 #if none specified, plain "puppet" will be used.
 #:puppet_server: puppet
 :unattended: <%= scope.lookupvar("foreman::unattended") %>
-:puppetconfdir: /etc/puppet/puppet.conf
+:puppetconfdir: /opt/rh/ruby193/root/etc/puppet/puppet.conf
 :login: <%= scope.lookupvar("foreman::authentication") %>
 :require_ssl: <%= scope.lookupvar("foreman::ssl") %>
 :locations_enabled: <%= scope.lookupvar("foreman::locations_enabled") %>

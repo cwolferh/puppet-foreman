@@ -66,7 +66,7 @@ class foreman::params {
           $yumcode = "f${::operatingsystemrelease}"
         }
         default: {
-          $puppet_basedir  = "/usr/lib/ruby/site_ruby/${ruby_major}/puppet"
+          $puppet_basedir  = "/opt/rh/ruby193/root/usr/share/ruby/vendor_ruby/puppet"
           $apache_conf_dir = '/etc/httpd/conf.d'
           $osmajor = regsubst($::operatingsystemrelease, '\..*', '')
           $yumcode = "el${osmajor}"
@@ -82,7 +82,7 @@ class foreman::params {
       $apache_conf_dir = '/etc/apache2/conf.d/foreman.conf'
     }
   }
-  $puppet_home = '/var/lib/puppet'
+  $puppet_home = '/opt/rh/ruby193/root/var/lib/puppet'
 
   # If CA is specified, remote Foreman host will be verified in reports/ENC scripts
   $client_ssl_ca   = "${puppet_home}/ssl/certs/ca.pem"
